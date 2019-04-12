@@ -6,20 +6,40 @@
     <title>Prism Consulting Group</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
   </head>
   <body>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item">
           Prism Consulting
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navMenu" class="navbar-menu">
         <div class="navbar-start">
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
@@ -70,26 +90,36 @@
         </div>
 
         <div class="navbar-end">
-          <a class="navbar-item">
-            <span class="icon has-test-link">
-              <i class="fab fa-linkedin"></i>
-            </span>
-          </a>
-          <a class="navbar-item">
-            Contact Us
-          </a>
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="bd-tw-button button">
+                  <span class="icon has-test-link">
+                    <i class="fab fa-linkedin"></i>
+                  </span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-info">
+                  Contact Us
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+  <section class="hero is-info is-medium is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">
+          Welcome to Prism Consulting
+        </h1>
+        <h2 class="subtitle">
+          A premier pre-professional student organization at the <strong>University of Chicago</strong>
+        </h2>
+      </div>
     </div>
   </section>
   </body>
