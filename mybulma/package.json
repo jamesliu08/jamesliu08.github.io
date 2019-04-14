@@ -1,0 +1,28 @@
+{
+  "name": "mybulma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesliu08/jamesliu08.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesliu08/jamesliu08.github.io/issues"
+  },
+  "homepage": "https://github.com/jamesliu08/jamesliu08.github.io#readme",
+  "devDependencies": {
+    "bulma": "^0.7.4",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+  "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+  "css-watch": "npm run css-build -- --watch",
+  "start": "npm run css-watch"
+  }
+}
