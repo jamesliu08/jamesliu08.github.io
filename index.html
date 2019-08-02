@@ -1,84 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-          crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css?famhily=Fira+Code&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>James Liu | UChicago CS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/home.css">
-
-    <script src="https://kit.fontawesome.com/ef5ad04847.js"></script>
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-            crossorigin=""></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $()
-        })
+        $(document).ready(function() {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
     </script>
-    <title>James Liu</title>
 </head>
-<body class="bg-dark">
+<body class="">
 
-<div class="container-fluid fixed-bottom semi-transparent py-3">
-    <div class="row justify-content-around">
-        <a href="#" class="icon"><i class="fas fa-file-alt"></i></a>
-        <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="icon"><i class="fab fa-github"></i></a>
+<section class="hero is-fullheight is-dark">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="img/Website%20Logo.png" alt="Logo">
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+                </div>
+                <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item is-active">
+                            Home
+                        </a>
+                        <a class="navbar-item">
+                            About Me
+                        </a>
+                        <a class="navbar-item">
+                            My Projects
+                        </a>
+                        <span class="navbar-item">
+                            <a class="button is-dark is-inverted">
+                                <span class="icon">
+                                  <i class="fas fa-file-alt"></i>
+                                </span>
+                                <span>Resume</span>
+                            </a>
+                        </span>
+                        <span class="navbar-item">
+                          <a class="button is-success is-inverted">
+                            <span class="icon">
+                              <i class="fab fa-github"></i>
+                            </span>
+                            <span>Github</span>
+                          </a>
+                        </span>
+                        <span class="navbar-item">
+                            <a class="button is-info is-inverted">
+                                <span class="icon">
+                                  <i class="fab fa-linkedin"></i>
+                                </span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </header>
     </div>
-</div>
 
-<ul class="nav fixed-top justify-content-around bg-transparent">
-    <li class="nav-item">
-        <a class="nav-link text-white" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-white" href="#">About Me</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-white" href="#">My Projects</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-white" href="#">Get In Touch</a>
-    </li>
-</ul>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-left">
+            <div class="columns">
+                <div class="column">
+                    <h3 class="subtitle">Hi I'm</h3>
+                    <h1 class="title is-0 is-spaced">
+                        James Liu
+                    </h1>
+                    <h2 class="subtitle is-5">
+                        I'm an incoming third year computer science major at the University of Chicago,
+                        interested in exploring how technology can empower underprivileged individuals
+                        and bring together communities around the world.
+                    </h2>
+                </div>
+                <div class="column">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical">
+                            <div class="tile">
+                                <div class="tile is-parent">
+                                    <article class="tile is-child notification is-info">
+                                        <p class="title">My Work</p>
+                                        <p class="subtitle">Writing Code For A Purpose</p>
+                                        <figure class="image is-4by3">
 
-<div class="container-fluid bg-transparent">
-    <div class="row vh-100 align-items-center text-center">
-        <div class="col-12 text-white">
-            <h1 class="display-1 mb-5">Hi, I'm James</h1>
-            <p class="lead mb-5">A computer science major at the University of Chicago</p>
-            <a class="btn btn-outline-light btn-lg" href="#" role="button">About Me</a>
-            <a class="btn btn-outline-light btn-lg" href="#" role="button">My Work</a>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification is-primary">
+                                        <p class="title">About Me</p>
+                                        <p class="subtitle">My Passions and Interests</p>
+                                    </article>
+                                    <article class="tile is-child notification is-danger">
+                                        <p class="title">Contact Me</p>
+                                        <p class="subtitle">Let's Get To Know Each Other</p>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="map"></div>
-
-
-<!--<script>-->
-<!--    var map = L.map('map', {-->
-<!--        zoomControl: false,-->
-<!--    }).setView([42.3601, -71.1589], 12);-->
-
-<!--    L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {-->
-<!--        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'-->
-<!--    }).addTo(map);-->
-<!--</script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+</section>
 </body>
 </html>

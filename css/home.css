@@ -1,29 +1,11 @@
-body{
-    font-family: 'Fira Code', monospace;
+.is-0 {
+    font-size: 5rem;
 }
 
-#map{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
+.notification.is-danger {
+    background-color: #FF5D73;
 }
 
-.semi-transparent{
-    background-color: rgba(0, 0, 0, .5)
-}
-
-.semi-transparent-light{
-    background-color: rgba(256, 256, 256, .8)
-}
-
-.icon {
-    font-size: 1.5em;
-    color: white;
-}
-
-.nav-link {
-    color: black;
+.notification.is-primary {
+    background-color: #7c7a7a;
 }
