@@ -1,11 +1,19 @@
-.is-0 {
-    font-size: 5rem;
+.card {
+    height: 10rem;
 }
 
-.notification.is-danger {
-    background-color: #FF5D73;
+.pt-6{
+    padding-top: 5rem;
 }
 
-.notification.is-primary {
+.bg-maroon {
+    background-color: #ff5d73;
+}
+
+.bg-darkgrey {
     background-color: #7c7a7a;
+}
+
+a:hover{
+    text-decoration: none;
 }

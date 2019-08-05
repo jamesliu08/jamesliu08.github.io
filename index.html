@@ -2,132 +2,141 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>James Liu | UChicago CS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/home.css">
     <script>
-        $(document).ready(function() {
-
-            // Check for click events on the navbar burger icon
-            $(".navbar-burger").click(function() {
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                $(".navbar-burger").toggleClass("is-active");
-                $(".navbar-menu").toggleClass("is-active");
-
-            });
-        });
     </script>
 </head>
-<body class="">
+<body>
 
-<section class="hero is-fullheight is-dark">
-    <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
-        <header class="navbar">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item">
-                        <img src="img/Website%20Logo.png" alt="Logo">
-                    </a>
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-                </div>
-                <div id="navbarMenuHeroC" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a class="navbar-item is-active">
-                            Home
-                        </a>
-                        <a class="navbar-item">
-                            About Me
-                        </a>
-                        <a class="navbar-item">
-                            My Projects
-                        </a>
-                        <span class="navbar-item">
-                            <a class="button is-dark is-inverted">
-                                <span class="icon">
-                                  <i class="fas fa-file-alt"></i>
-                                </span>
-                                <span>Resume</span>
-                            </a>
-                        </span>
-                        <span class="navbar-item">
-                          <a class="button is-success is-inverted">
-                            <span class="icon">
-                              <i class="fab fa-github"></i>
-                            </span>
-                            <span>Github</span>
-                          </a>
-                        </span>
-                        <span class="navbar-item">
-                            <a class="button is-info is-inverted">
-                                <span class="icon">
-                                  <i class="fab fa-linkedin"></i>
-                                </span>
-                                <span>LinkedIn</span>
-                            </a>
-                        </span>
-
-                    </div>
-                </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Get In Touch</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-        </header>
+            <div class="modal-body">
+                Whether you want to learn more about me, work together on a project, or just talk, I'm always ready to listen!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
     </div>
+</div>
 
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-        <div class="container has-text-left">
-            <div class="columns">
-                <div class="column">
-                    <h3 class="subtitle">Hi I'm</h3>
-                    <h1 class="title is-0 is-spaced">
-                        James Liu
-                    </h1>
-                    <h2 class="subtitle is-5">
-                        I'm an incoming third year computer science major at the University of Chicago,
-                        interested in exploring how technology can empower underprivileged individuals
-                        and bring together communities around the world.
-                    </h2>
-                </div>
-                <div class="column">
-                    <div class="tile is-ancestor">
-                        <div class="tile is-vertical">
-                            <div class="tile">
-                                <div class="tile is-parent">
-                                    <article class="tile is-child notification is-info">
-                                        <p class="title">My Work</p>
-                                        <p class="subtitle">Writing Code For A Purpose</p>
-                                        <figure class="image is-4by3">
+<nav class="navbar position-absolute w-100 navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="img/Website%20Logo.png" height="30" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="tile is-parent is-vertical">
-                                    <article class="tile is-child notification is-primary">
-                                        <p class="title">About Me</p>
-                                        <p class="subtitle">My Passions and Interests</p>
-                                    </article>
-                                    <article class="tile is-child notification is-danger">
-                                        <p class="title">Contact Me</p>
-                                        <p class="subtitle">Let's Get To Know Each Other</p>
-                                    </article>
-                                </div>
-
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="projects.html">My Work</a>
+            <a class="nav-item nav-link" href="about.html">About Me</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <div class="nav-item nav-link">
+                <a href="#">
+                    <button class="btn btn-outline-info rounded-pill">
+                    <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                        <span>Email</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-dark rounded-pill">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                        <span>Resume</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-success rounded-pill">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                        <span>Github</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary rounded-pill">
+                    <span class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </span>
+                        <span>LinkedIn</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container vh-100 pt-6 pt-lg-0 d-flex">
+    <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+            <h3 class="display-5">Hi I'm</h3>
+            <h1 class="display-1">
+                James Liu
+            </h1>
+            <p class="lead">
+                I'm an incoming third year computer science major at the University of Chicago,
+                interested in exploring how technology can empower people, create communities, and
+                make the world a better place.
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row">
+                <div class="col-12">
+                    <a href="projects.html">
+                        <div class="card bg-maroon text-white">
+                            <div class="card-body">
+                                <h2 class="card-title">My Work</h2>
+                                <p class="card-text">Writing Code For a Purpose</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6">
+                    <a href="about.html">
+                        <div class="card bg-darkgrey text-white">
+                            <div class="card-body">
+                                <h2 class="card-title">About Me</h2>
+                                <p class="card-text">My Passions and Interests</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <h2 class="card-title">Contact Me</h2>
+                                <p class="card-text">Let's Get To Know Each Other</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
-</section>
+ </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>James Liu | UChicago CS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
+    <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="img/Website%20Logo.png" height="30" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="projects.html">My Work</a>
+            <a class="nav-item nav-link" href="about.html">About Me</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <div class="nav-item nav-link">
+                <a href="#">
+                    <button class="btn btn-outline-info rounded-pill">
+                    <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                        <span>Email</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-dark rounded-pill">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                        <span>Resume</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-success rounded-pill">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                        <span>Github</span>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn btn-outline-primary rounded-pill">
+                    <span class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </span>
+                        <span>LinkedIn</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <h1 class="display-4 text-center">Projects</h1>
+    <div class="row pt-4">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Contact Me</h2>
+                            <p class="card-text">Let's Get To Know Each Other</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="row mr-1 mb-4">
+                <div id="map" style="height: 15rem;" class="container"></div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Contact Me</h2>
+                        <p class="card-text">Let's Get To Know Each Other</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // replace "toner" here with "terrain" or "watercolor"
+    var layer = new L.StamenTileLayer("toner-lite");
+    var map = new L.Map("map", {
+        center: new L.LatLng(37.7, -122.4),
+        zoom: 12
+    });
+    map.addLayer(layer);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
