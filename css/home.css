@@ -7,13 +7,40 @@
 }
 
 .bg-maroon {
-    background-color: #ff5d73;
+    background-color: #ffb6b9;
 }
 
 .bg-darkgrey {
-    background-color: #7c7a7a;
+    background-color: #cccccc;
+}
+
+.bg-aqua {
+    background-color: #8ac6d1;
 }
 
 a:hover{
     text-decoration: none;
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(160deg, #ffffff 40%,#b4daf0);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.active-custom{
+    background-color: #b4daf0;
+    border-color: #b4daf0;
+    color: #fff;
+}
+
+.projects-bar{
+    top: 50%;
+    left: 1em;
+    transform: translate(0%, -50%);
 }
